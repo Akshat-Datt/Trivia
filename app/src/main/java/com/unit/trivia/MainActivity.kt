@@ -5,6 +5,7 @@ import android.view.inputmethod.InputBinding
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -16,13 +17,13 @@ import androidx.databinding.DataBindingUtil
 import com.unit.trivia.databinding.ActivityMainBinding
 import com.unit.trivia.ui.theme.TriviaTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
+        @Suppress("UNUSED VARIABLE")
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
     }
 }
