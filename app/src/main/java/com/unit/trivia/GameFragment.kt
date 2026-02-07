@@ -54,6 +54,35 @@ class GameFragment : Fragment() {
 
         binding.game = this
 
+        binding.submitButton.setOnClickListener { view: View ->
+            val checkedId = binding.radioGroup.checkedRadioButtonId
+
+            if(-1 != checkedId){
+                var answerIndex = 0
+                when(checkedId){
+                    R.id.radioButton2 -> answerIndex = 1
+                    R.id.radioButton3 -> answerIndex = 2
+                    R.id.radioButton4 -> answerIndex = 3
+                }
+
+                if(answers[answerIndex] == currentQuestion.answers[0]){
+                    questionIndex++
+
+                    if(questionIndex < numQuestions){
+                        currentQuestion = questions[questionIndex]
+                        setQuestion()
+                        binding.invalidateAll()
+                    }
+                    else{
+                        //Game won
+                    }
+                }
+                else{
+                    //game lost
+                }
+            }
+        }
+
         return binding.root;
     }
 
