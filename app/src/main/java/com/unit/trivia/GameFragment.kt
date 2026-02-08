@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.runtime.currentRecomposeScope
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.unit.trivia.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
@@ -74,11 +75,11 @@ class GameFragment : Fragment() {
                         binding.invalidateAll()
                     }
                     else{
-                        //Game won
+                        view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
                     }
                 }
                 else{
-                    //game lost
+                    view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
                 }
             }
         }

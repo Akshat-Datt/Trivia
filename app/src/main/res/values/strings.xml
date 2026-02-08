@@ -3,4 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="play">PLAY</string>
+    <string name="submit">SUBMIT</string>
+    <string name="gameOver">GAME OVER</string>
+    <string name="gameWon">GAME WON</string>
 </resources>

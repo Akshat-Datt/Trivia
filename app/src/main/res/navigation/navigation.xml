@@ -17,5 +17,20 @@
         android:id="@+id/gameFragment"
         android:name="com.unit.trivia.GameFragment"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.unit.trivia.GameOverFragment"
+        android:label="GameOverFragment" />
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="com.unit.trivia.GameWonFragment"
+        android:label="GameWonFragment" />
 </navigation>
