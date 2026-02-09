@@ -6,4 +6,6 @@
     <string name="submit">SUBMIT</string>
     <string name="gameOver">GAME OVER</string>
     <string name="gameWon">GAME WON</string>
+    <string name="try_again">TRY AGAIN</string>
+    <string name="play_again">PLAY AGAIN</string>
 </resources>
