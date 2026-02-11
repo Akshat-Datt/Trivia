@@ -30,12 +30,19 @@ class MainActivity : AppCompatActivity() {
         @Suppress("UNUSED VARIABLE")
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        val navController = this.findNavController(R.id.myNavHostFragment)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.myNavHostFragment)
+                    as androidx.navigation.fragment.NavHostFragment
+
+        val navController = navHostFragment.navController
         NavigationUI.setupActionBarWithNavController(this,navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = this.findNavController(R.id.myNavHostFragment)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.myNavHostFragment)
+                    as androidx.navigation.fragment.NavHostFragment
+        val navController = navHostFragment.navController
         return navController.navigateUp()
     }
 }
