@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/titleFragment"
         android:name="com.unit.trivia.TitleFragment"
-        android:label="TitleFragment" >
+        android:label="Did You Know?">
         <action
             android:id="@+id/action_titleFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
@@ -16,8 +16,8 @@
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.unit.trivia.GameFragment"
-        android:label="fragment_game"
-        tools:layout="@layout/fragment_game" >
+        android:label="Tirvia"
+        tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/action_gameFragment_to_gameOverFragment"
             app:destination="@id/gameOverFragment"
@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/gameOverFragment"
         android:name="com.unit.trivia.GameOverFragment"
-        android:label="GameOverFragment" >
+        android:label="Game Over">
         <action
             android:id="@+id/action_gameOverFragment_to_gameFragment"
             app:destination="@id/gameFragment"
@@ -41,14 +41,14 @@
     <fragment
         android:id="@+id/gameWonFragment"
         android:name="com.unit.trivia.GameWonFragment"
-        android:label="GameWonFragment" >
+        android:label="Game Won">
         <action
             android:id="@+id/action_gameWonFragment_to_gameFragment"
             app:destination="@id/gameFragment"
             app:popUpTo="@id/titleFragment" />
     </fragment>
     <fragment
-        android:id="@+id/aboutFragment2"
+        android:id="@+id/aboutFragment"
         android:name="com.unit.trivia.AboutFragment"
         android:label="AboutFragment" />
 </navigation>
